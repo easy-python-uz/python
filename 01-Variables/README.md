@@ -3,7 +3,7 @@
 ## 🗂️ O'zgaruvchining ta'rifi
 **O'zgaruvchi** — bu ma’lumotlarni vaqtincha saqlash uchun ishlatiladigan nomlangan konteyner. Ular yordamida ma’lumotlar bilan ishlash, ularni saqlash va qayta ishlatish qulaylashadi.
 
-📌 **Masalan:**
+📌 **Example:**
 ```python
 x = 5
 name = "Alice"
