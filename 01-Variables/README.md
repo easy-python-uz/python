@@ -19,6 +19,8 @@ print(name)     # Alice
 
 Python dasturlash tilida o‘zgaruvchi yaratish uchun maxsus `keyword` yo‘q. O‘zgaruvchi unga **birinchi marta qiymat berilganda** yaratiladi:
 
+
+📌 **Example:**
 ```python
 x = 5               # int (butun son)
 y = 3.14            # float (o'nlik son)
