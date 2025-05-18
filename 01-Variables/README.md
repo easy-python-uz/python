@@ -1,0 +1,4 @@
+- [1.1-variables](https://github.com/easy-python-uz/python/blob/main/01-Variables/1.1-variables.md)
+- [1.2-variable-name](https://github.com/easy-python-uz/python/blob/main/01-Variables/1.2-variable-name.md)
+- [1.3-assign-multiple-values](https://github.com/easy-python-uz/python/blob/main/01-Variables/1.3-assign-multiple-values.md)
+- [1.4-output-variables](https://github.com/easy-python-uz/python/blob/main/01-Variables/1.4-output-variables.md)
