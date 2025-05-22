@@ -44,7 +44,7 @@ Yuqoridagi misolda `x` o'zgaruvchisini qiymati 5 ga teng edi pastda esa uni qiym
 
 ## 🔁 Ma'lumot turini o'zgartirish (Type Casting)
 
-Ma’lumot turini biridan boshqasiga o‘tkazish uchun `str()`, `int()`, `float()` funksiyalaridan foydalanamiz:
+Pythonda **type casting** – bu bir turdagi ma’lumotni boshqa turga o‘zgartirish jarayonidir. Misol uchun: `int` (butun son) → `float` (o‘nlik son) yoki `str` (matn) → int (butun son) va hokazo.
 
 ```python
 x = str(3)    # '3' (string)
@@ -53,6 +53,53 @@ z = float(3)  # 3.0 (o'nlik son)
 ```
 
 ---
+
+## 🔧 Python'da 2 xil turdagi type casting mavjud:
+
+1. Qo‘l bilan o‘zgartirish (Explicit Type Casting)
+2. Python avtomatik o‘zgartiradi (Implicit Type Casting)
+
+## ✅ 1. Qo‘lda o‘zgartirish (Explicit Type Casting)
+
+Siz o‘zingiz kodda `int()`, `float()`, `str()` funksiyalarini ishlatib o‘zgartirasiz.
+
+```python
+# str → int
+x = "123"
+y = int(x)
+print(y)         # Natija: 123
+print(type(y))   # <class 'int'>
+
+# float → int
+a = 12.5
+b = int(a)
+print(b)         # Natija: 12 (butun qismigacha kesiladi)
+
+# int → float
+num = 10
+flt = float(num)
+print(flt)       # Natija: 10.0
+
+# int → str
+age = 25
+text = str(age)
+print(text)      # Natija: "25"
+print(type(text))  # <class 'str'>
+```
+> 🔔 Eslatma: `int("12")` ishlaydi, lekin `int("salom")` xatolik beradi!
+
+## 2. Avtomatik o‘zgartirish (Implicit Type Casting)
+
+Python ba’zida o‘zi avtomatik **kichik turdagi** ma’lumotni **kattaroq turga** o‘zgartiradi (masalan `int` → `float`).
+
+```python
+x = 5      # int
+y = 2.0    # float
+
+z = x + y  # Python o'zi x ni float ga aylantiradi
+print(z)   # Natija: 7.0
+print(type(z))  # <class 'float'>
+```
 
 ## 🔍 Ma'lumot turi qanday aniqlanadi?
 
