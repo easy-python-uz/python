@@ -136,7 +136,7 @@ print(message)
 
 ---
 
-## 📜 Triple Quotes (Ko‘p qatorli matnlar uchun)
+## 📜 Triple Quotes
 
 Agar string ko‘p qatorli bo‘lsa, uchlik qo‘shtirnoq (`'''` yoki `"""`) ishlatiladi:
 
