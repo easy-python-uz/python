@@ -15,7 +15,7 @@ name = "Alice"
 
 ## 🛠️ O'zgaruvchi yaratish (Creating Variables)
 
-Python tilida o‘zgaruvchi yaratish uchun maxsus `keyword` yo‘q. O‘zgaruvchi unga **birinchi marta qiymat berilganda** yaratiladi:
+Python dasturlash tilida o‘zgaruvchi yaratish uchun maxsus `keyword` yo‘q. O‘zgaruvchi unga **birinchi marta qiymat berilganda** yaratiladi:
 
 ```python
 x = 5         # int (butun son)
@@ -36,6 +36,7 @@ x = 5
 x = "Hello world"
 print(x)  # Hello world
 ```
+Yuqoridagi misolda `x` o'zgaruvchisini qiymati 5 ga teng edi pastda esa uni qiymati `Hello world`ga o'zgardi.
 
 ---
 
