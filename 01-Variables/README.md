@@ -42,7 +42,7 @@ Yuqoridagi misolda `x` o'zgaruvchisini qiymati 5 ga teng edi pastda esa uni qiym
 
 ---
 
-## 🔁 Type Casting (Ma'lumot turini o'zgartirish)
+## 🔁 Ma'lumot turini o'zgartirish (Type Casting)
 
 Ma’lumot turini biridan boshqasiga o‘tkazish uchun `str()`, `int()`, `float()` funksiyalaridan foydalanamiz:
 
