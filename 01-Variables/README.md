@@ -7,6 +7,8 @@
 ```python
 x = 5
 name = "Alice"
+print(x)        # 5
+print(name)     # Alice
 ```
 
 ![O'zgaruvchi tasviri](images/image.png)
@@ -18,10 +20,10 @@ name = "Alice"
 Python dasturlash tilida o‘zgaruvchi yaratish uchun maxsus `keyword` yo‘q. O‘zgaruvchi unga **birinchi marta qiymat berilganda** yaratiladi:
 
 ```python
-x = 5         # int (butun son)
-y = 3.14      # float (o'nlik son)
-name = "Alice"  # str (string)
-is_active = True  # bool (mantiqiy qiymat)
+x = 5               # int (butun son)
+y = 3.14            # float (o'nlik son)
+name = "Alice"      # str (string)
+is_active = True    # bool (mantiqiy qiymat)
 
 print(x)
 print(y)
