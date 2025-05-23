@@ -5,3 +5,4 @@
 - [Data Types](https://github.com/easy-python-uz/python/blob/main/02-Data%20Types/README.md)
 - [Operators](https://github.com/easy-python-uz/python/blob/main/02-operators/README.md)
 - [Lists](https://github.com/easy-python-uz/python/blob/main/03-lists/README.md)
+- [Tuples](https://github.com/easy-python-uz/python/blob/main/04-tuples/README.md)
