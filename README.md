@@ -1,10 +1,43 @@
 # Easy Python - Table of Contents
 
-- [Python Basics](https://github.com/easy-python-uz/python/blob/main/00-Python%20Basics/README.md)
-- [Variables](https://github.com/easy-python-uz/python/blob/main/01-Variables/README.md)
-- [Data Types](https://github.com/easy-python-uz/python/blob/main/02-Data%20Types/README.md)
-- [Operators](https://github.com/easy-python-uz/python/blob/main/02-operators/README.md)
-- [Lists](https://github.com/easy-python-uz/python/blob/main/03-lists/README.md)
-- [Tuples](https://github.com/easy-python-uz/python/blob/main/04-tuples/README.md)
-- [Sets](https://github.com/easy-python-uz/python/blob/main/05-sets/README.md)
-- [Dictionary](https://github.com/easy-python-uz/python/blob/main/06-dictionary/README.md)
+│
+├── 01-introduction-to-python/
+├── 02-variables/
+├── 03-data-types/
+├── 04-operators/
+├── 05-lists/
+├── 06-tuples/
+├── 07-sets/
+├── 08-dictionaries/
+├── 09-conditional-statements/
+├── 10-for-loops/
+├── 11-while-loops/
+├── 12-functions/
+├── 13-lambda-functions/
+├── 14-exception-handling/
+├── 15-file-handling/
+├── 16-modules/
+├── 17-third-party-packages/
+├── 18-object-oriented-programming/
+├── 19-dates-and-time/
+├── 20-file-and-directory-operations/
+├── 21-iterators-and-generators/
+├── 22-decorators/
+├── 23-list-comprehensions/
+├── 24-regular-expressions/
+├── 25-working-with-json/
+├── 26-working-with-apis/
+├── 27-mysql-postgresql-integration/
+├── 28-sqlite-integration/
+├── 29-virtual-environments/
+├── 30-packaging-applications/
+├── 31-writing-tests/
+├── 32-logging/
+├── 33-multithreading-multiprocessing/
+├── 34-async-programming/
+├── 35-gui-with-tkinter/
+├── 36-cli-with-argparse/
+├── 37-web-scraping/
+├── 38-real-world-project/
+├── 39-version-control-git/
+└── 40-practice-tasks-and-mini-projects/

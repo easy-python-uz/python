@@ -1,665 +1,245 @@
-# 🧠 Variables (O'zgaruvchilar)
+# 🐍 PYTHON DASTURLASH ASOSLARI
 
-## 🗂️ O'zgaruvchining ta'rifi
-**O'zgaruvchi** — bu ma’lumotlarni vaqtincha saqlash uchun ishlatiladigan nomlangan konteyner. Ular yordamida ma’lumotlar bilan ishlash, ularni saqlash va qayta ishlatish qulaylashadi.
+# 🧩 VARIABLES
 
-📌 **Example:**
+>[!NOTE]
+> Python dasturlash tilida `variables` — bu ma’lumotlarni `vaqtincha saqlash` uchun ishlatiladigan `nomlangan konteynerlardir`. O‘zgaruvchilar yordamida `ma’lumotlar bilan ishlash`, `ularni saqlash` va `qayta ishlatish` qulaylashadi.
+
+## ✅ O'ZGARUVCHI NIMA?
+
+**O'zgaruvchi** - kompyuter xotirasida ma'lum bir qiymatni saqlash uchun ajratilgan joy.
+
+📌 Tasavvur qiling, sizda bir savat bor va unga olma solyapsiz. Bu savat — bu o‘zgaruvchi, olma esa qiymat. Siz xohlagan paytingizda savatdagi olmani almashtirishingiz mumkin. Dasturlashda ham o‘zgaruvchi — bu ma’lumotni vaqtincha saqlash uchun ishlatiladigan idish.
+
+![alt text](images/image.png)
+
+
+📌 Quyidagi misolda 4 ta o'zgaruvchi yaratdik (`x`, `y`, `name` va `is_student`) va ularga har xil ma'lumot yukladik.
+
 ```python
+# Butun sonni (integer) o'zgaruvchiga saqlaymiz
 x = 5
+
+# Haqiqiy sonni (float) o'zgaruvchiga saqlaymiz
+y = 3.14
+
+# Matn (string) qiymatni o'zgaruvchiga saqlaymiz
 name = "Alice"
-print(x)        # 5
-print(name)     # Alice
-```
 
-![O'zgaruvchi tasviri](images/image.png)
+# Mantiqiy (boolean) qiymatni o'zgaruvchiga saqlaymiz
+is_student = True
 
----
-
-## 🛠️ O'zgaruvchi yaratish (Creating Variables)
-
-Python dasturlash tilida o‘zgaruvchi yaratish uchun maxsus `keyword` yo‘q. O‘zgaruvchi unga **birinchi marta qiymat berilganda** yaratiladi:
-
-
-📌 **Example:**
-```python
-x = 5               # int (butun son)
-y = 3.14            # float (o'nlik son)
-name = "Alice"      # str (string)
-is_active = True    # bool (mantiqiy qiymat)
-
+# x o'zgaruvchisining qiymatini chiqaramiz
 print(x)
+
+# y o'zgaruvchisining qiymatini chiqaramiz
 print(y)
+
+# name o'zgaruvchisining qiymatini chiqaramiz
 print(name)
-print(is_active)
+
+# is_student o'zgaruvchisining qiymatini chiqaramiz
+print(is_student)
 ```
 
-> 🔄 O'zgaruvchilar qiymati istalgan payt o'zgartirilishi mumkin:
+
+📌 `variable` diyilishini sababi uning qiymati istalgan payt o'zgarishi mumkin:
 
 ```python
-x = 5
-x = "Hello world"
-print(x)  # Hello world
-```
-Yuqoridagi misolda `x` o'zgaruvchisini qiymati 5 ga teng edi pastda esa uni qiymati `Hello world`ga o'zgardi.
+# 'name' o'zgaruvchisiga dastlab 'Alisher' matnini beramiz
+name = 'Alisher'
 
----
+# name o'zgaruvchisining hozirgi qiymatini chiqaramiz (Alisher)
+print(name)
 
-## 🔁 Ma'lumot turini o'zgartirish (Type Casting)
+# name o'zgaruvchisining qiymatini o'zgartiramiz, endi u 'Muhammad' bo'ladi
+name = "Muhammad"
 
-Pythonda **type casting** – bu bir turdagi ma’lumotni boshqa turga o‘zgartirish jarayonidir. Misol uchun: `int` (butun son) → `float` (o‘nlik son) yoki `str` (matn) → int (butun son) va hokazo.
-
-```python
-x = str(3)    # '3' (string)
-y = int(3)    # 3 (butun son)
-z = float(3)  # 3.0 (o'nlik son)
+# name o'zgaruvchisining yangi qiymatini chiqaramiz (Muhammad)
+print(name)
 ```
 
----
+## ✅ O'ZGARUVCHILARNI NOMLASH
 
-## 🔧 Python'da 2 xil turdagi type casting mavjud:
+## ❗ O'zgaruvchilarga nom berishda quyidagi qoidalarga amal qiling:
 
-1. Qo‘l bilan o‘zgartirish (Explicit Type Casting)
-2. Python avtomatik o‘zgartiradi (Implicit Type Casting)
+### ❌ O'zgaruvchi nomi harf yoki pastki chiziq (`_`) bilan boshlanishi kerak
 
-## ✅ 1. Qo‘lda o‘zgartirish (Explicit Type Casting)
-
-Siz o‘zingiz kodda `int()`, `float()`, `str()` funksiyalarini ishlatib o‘zgartirasiz.
+✅ To‘g‘ri:
 
 ```python
-# str → int
-x = "123"
-y = int(x)
-print(y)         # Natija: 123
-print(type(y))   # <class 'int'>
+# Harflardan tashkil topgan oddiy o'zgaruvchi nomi
+ism = "Ali"
 
-# float → int
-a = 12.5
-b = int(a)
-print(b)         # Natija: 12 (butun qismigacha kesiladi)
-
-# int → float
-num = 10
-flt = float(num)
-print(flt)       # Natija: 10.0
-
-# int → str
-age = 25
-text = str(age)
-print(text)      # Natija: "25"
-print(type(text))  # <class 'str'>
-```
-> 🔔 Eslatma: `int("12")` ishlaydi, lekin `int("salom")` xatolik beradi!
-
-## 2. Avtomatik o‘zgartirish (Implicit Type Casting)
-
-Python ba’zida o‘zi avtomatik **kichik turdagi** ma’lumotni **kattaroq turga** o‘zgartiradi (masalan `int` → `float`).
-
-```python
-x = 5      # int
-y = 2.0    # float
-
-z = x + y  # Python o'zi x ni float ga aylantiradi
-print(z)   # Natija: 7.0
-print(type(z))  # <class 'float'>
+# Pastki chiziq (_) bilan boshlangan o'zgaruvchi nomi
+_yosh = 25
 ```
 
-## 🔍 Ma'lumot turi qanday aniqlanadi?
-
-`type()` funksiyasi yordamida o‘zgaruvchining ma’lumot turini aniqlash mumkin:
+❌ Noto‘g‘ri:
 
 ```python
-x = 5
-y = "John"
-
-print(type(x))  # <class 'int'>
-print(type(y))  # <class 'str'>
+# ❌ Son bilan boshlanmaydi
+1ism = "Ali"
 ```
 
----
+### ❌ O'zgaruvchi nomi raqam bilan boshlanishi mumkin emas
 
-## 🧾 Single va Double Quotes farqi
+📌 Raqam faqat nomning oxirida yoki o‘rtasida ishlatilishi mumkin.
 
-Stringlar (`matn`) yozishda `''` yoki `""` ishlatish mumkin – ular bir xil ishlaydi:
+✅ To‘g‘ri:
 
 ```python
-name = 'John'
-name = "John"
+# O'zgaruvchi nomi harf bilan boshlangan va raqam bilan tugagan — to'g'ri
+raqam1 = 10
+
+# O'zgaruvchi nomi harf bilan boshlangan va oxirida raqam ishlatilgan — to'g'ri
+sana2025 = 2025
 ```
 
-🔸 Ba'zi holatlarda **bittasini tanlash qulayroq bo'ladi**:
+❌ Noto‘g‘ri:
 
 ```python
-message = 'He said, "Python is awesome!"'
-print(message)
-
-message = "It's a beautiful day!"
-print(message)
+# ❌ Raqam bilan boshlanmaydi
+3dars = "Python"
 ```
 
----
+### ❌ O'zgaruvchi nomida faqatgina ingliz tili alifbosi harflari (`A-z`), raqamlar (`0-9`) va pastki chiziq (`_`) qatnashishi mumkin
 
-## 📜 Triple Quotes
+📌 Maxsus belgilar (`@`, `!`, `#`, `-` va boshqalar) o‘zgaruvchi nomida ishlatilmaydi.
 
-Agar string ko‘p qatorli bo‘lsa, uchlik qo‘shtirnoq (`'''` yoki `"""`) ishlatiladi:
-
-```python
-text = """This is a
-multiline string."""
-print(text)
-
-text = '''This is also a
-multiline string.'''
-print(text)
-```
-
----
-
-## ⚠️ Katta-kichik harflarga sezuvchanlik (Case-sensitive)
-
-Python dasturlash tili `case-sensitive`, ya'ni:
+✅ To‘g‘ri:
 
 ```python
-a = 4
-A = "Sally"
-
-print(a)  # 4
-print(A)  # Sally
-```
-
-> `a` va `A` bu yerda **ikkita turli o‘zgaruvchi** hisoblanadi.
-
-# 🧠 Variable Names (O'zgaruvchi Nomlari)
-
-## 📜 Qoidalarga muvofiq nomlash
-
-O'zgaruvchilarga nom berishda quyidagi qoidalarga amal qiling:
-
-> ⚠️ **E'tibor bering**:
-> - O'zgaruvchi nomi **harf yoki pastki chiziq (`_`)** bilan boshlanishi kerak.
-> - O'zgaruvchi nomi **raqam bilan boshlanishi mumkin emas.**
-> - Nomda faqatgina **lotin alifbosi harflari (`A-z`), raqamlar (`0-9`) va pastki chiziq (`_`)** qatnashishi mumkin.
-> - O'zgaruvchi nomida **bo'shliq (`пробел`)** bo'lishi mumkin emas.
-> - Python tilida katta va kichik harflar **farqli** hisoblanadi:
->   - `ism`, `ISM`, va `Ism` uchta turli o'zgaruvchi sifatida qabul qilinadi.
-
-📌 **Noto'g'ri misollar**:
-```python
-2myvar = "John"  # Raqam bilan boshlanishi mumkin emas
-my-var = "John"  # Chiziqcha (-) ishlatish mumkin emas
-my var = "John"  # Bo'shliq bo'lishi mumkin emas
-```
-
----
-
-## 🛠️ Qo'shimcha qoidalar
-- O'zgaruvchi nomini **kichik harflar bilan** yozish tavsiya etiladi.
-- Agar o'zgaruvchi nomida bir nechta so'z qatnashsa, ular orasini **pastki chiziq (`_`)** bilan ajrating:
-  ```python
-  ism_familiya = "Umid G'aybullayev"
-  ```
-- O'zgaruvchiga **tushunarli va ma'noli nom** bering:
-  - `y=20` emas, balki `yosh=20` deb nomlang.
-  - `d="Korea"` emas, balki `davlat="Korea"` deb nomlang.
-- Pythonning maxsus **kalit so'zlari (keywords)** dan o'zgaruvchi nomi sifatida foydalanmang.
-
-📌 **To'g'ri misollar**:
-```python
-myvar = "John"
-my_var = "John"
-_my_var = "John"
-myVar = "John"
-MYVAR = "John"
-myvar2 = "John"
-```
-
-Kalit so'zlar ro'yxatini ko'rish uchun quyidagi koddan foydalaning:
-```python
-import keyword
-print(keyword.kwlist)
-```
-
----
-
-## 🏷️ Nomlash uslublari (Naming Conventions)
-
-Python dasturlash tilida o'zgaruvchilarni nomlashda bir nechta uslublardan foydalaniladi. Quyida ularning izohi va misollari keltirilgan:
-
-### 🐪 Camel Case
-So‘zlarning birinchi harfi kichik, ikkinchi va undan keyingi so‘zlarning birinchi harfi katta bo‘ladi.
-
-📌 **Misol**:
-```python
-myVariableName = "John"
-```
-
----
-
-### 🏛️ Pascal Case
-Har bir so‘zning birinchi harfi katta bo‘ladi.
-
-📌 **Misol**:
-```python
-MyVariableName = "John"
-```
-
----
-
-### 🐍 Snake Case
-So‘zlar kichik harflar bilan yoziladi va ular orasida pastki chiziq (`_`) ishlatiladi.
-
-📌 **Misol**:
-```python
-my_variable_name = "John"
-```
-
----
-
-## 🔑 Kalit So'zlardan Foydalanish
-
-Python tilida **kalit so‘zlar** (keywords) maxsus vazifalarni bajarish uchun ishlatiladi. Ushbu so‘zlardan o‘zgaruvchi nomi sifatida foydalanish **mumkin emas**.
-
-📋 **Kalit so‘zlar ro'yxatini olish uchun**:
-```python
-import keyword
-print(keyword.kwlist)
-```
-
-📌 **Misol**:
-```python
-class = "data"  # Xatolik! "class" kalit so'z hisoblanadi
-```
-
----
-
-## 📌 Yaxshi Amaliyotlar
-
-O‘zgaruvchilarni nomlashda quyidagi amaliyotlar tavsiya etiladi:
-1. O‘zgaruvchining **mazmunini bildiruvchi nomlar** tanlang:
-   ```python
-   x = 25  # Notushunarli
-   yosh = 25  # Tushunarli
-   ```
-2. Foydalanuvchiga qulay va o‘qilishi oson bo‘lgan nomlardan foydalaning.
-3. Katta loyihalarda **snake_case** uslubini qo‘llash afzalroq bo‘lishi mumkin.
-4. Agar vaqtinchalik o‘zgaruvchi yaratayotgan bo‘lsangiz, ehtiyot bo‘ling va umumiy nomlardan foydalanmang:
-   ```python
-   data = "Ma'lumot"  # Umumiy nom
-   user_data = "Ma'lumot"  # Tushunarli nom
-   ```
-
----
-
-## 🧪 Qo'shimcha Misollar
-Quyida turli uslublar va qo'llanilishiga oid misollar keltirilgan:
-
-```python
-# Camel Case
-userName = "Umid"
-
-# Pascal Case
-UserName = "Umid"
-
-# Snake Case
+# Lotin harflari va pastki chiziq ishlatilgan — to‘g‘ri
 user_name = "Umid"
 
-# Noto'g'ri nomlash
-2user = "Umid"  # Xatolik
-user-name = "Umid"  # Xatolik
-user name = "Umid"  # Xatolik
+# Harf va raqam ishlatilgan — to‘g‘ri
+user1 = "Ali"
+
+# Pastki chiziq bilan boshlangan nom — bu ham to‘g‘ri
+_max_score = 100
 ```
 
+❌ Noto‘g‘ri:
 
-# 🧠 Assigning Multiple Values (Bir nechta qiymatlarni tayinlash)
-
-Python dasturlash tilida bir nechta qiymatlarni bir vaqtning o‘zida bir nechta o‘zgaruvchilarga tayinlash mumkin. Quyida bu boradagi turli usullar keltirilgan.
-
----
-
-## 🛠️ Bir xil qiymatni o'zgaruvchilarga berish (Assigning the Same Value)
-
-Bir nechta o‘zgaruvchilarga **bir xil qiymatni** saqlash uchun quyidagi usuldan foydalanamiz:
-
-📌 **Misol**:
 ```python
-a = b = c = 100
-print(a, b, c)
+# O'zgaruvchi nomida '@' belgisi ishlatilgan — bu noto‘g‘ri
+# ❌ Maxsus belgilar (masalan: @) Python'da o'zgaruvchi nomida bo'lmasligi kerak
+ism@familiya = "Valijon"
+
+# O'zgaruvchi nomida '!' belgisi ishlatilgan — bu ham noto‘g‘ri
+# ❌ Maxsus belgilar (masalan: !) ruxsat etilmaydi
+yosh! = 18
 ```
 
-📋 **Natija**:
-```
-100 100 100
-```
+### ❌ O'zgaruvchi nomida bo'shliq (пробел) bo'lishi mumkin emas
 
-> 🔔 **Izoh**: Bu usul bir xil qiymatni bir nechta o‘zgaruvchilarga saqlash uchun juda qulay. Lekin, agar qiymat o‘zgaruvchi turiga qarab murakkab obyekt bo‘lsa (masalan, ro‘yxat), ehtiyot bo‘lish lozim. Chunki barcha o‘zgaruvchilar bitta obyektni ko‘rsatadi.
+✅ To‘g‘ri:
 
----
-
-## 🛠️ Har xil qiymatlarni o'zgaruvchilarga berish (Assigning Different Values)
-
-Bir nechta o‘zgaruvchilarga **har xil qiymatlarni** bitta qatorda tayinlash mumkin:
-
-📌 **Misol**:
 ```python
-a, b, c = 20, 2.5, "Python"
-print(a)
-print(b)
-print(c)
+# O'zgaruvchi nomida pastki chiziq ishlatilgan — bu to‘g‘ri usul
+ism_familiya = "Ali Karimov"
 ```
 
-📋 **Natija**:
-```
-20
-2.5
-Python
-```
+❌ Noto‘g‘ri:
 
-> 🔔 **Izoh**: O‘zgaruvchilar va qiymatlar soni bir xil bo‘lishi shart. Aks holda **ValueError** xatosi yuzaga keladi:
 ```python
-a, b = 10, 20, 30  # ValueError: too many values to unpack
+# O'zgaruvchi nomida bo‘shliq (space) ishlatilgan — bu noto‘g‘ri
+# ❌ Python'da o'zgaruvchi nomi bo‘shliq bilan yozilmaydi
+ism familiya = "Ali Karimov"
 ```
 
----
+### ❌ O'zgaruvchi nomida katta-kichik harflar turlicha talqin qilinadi (`ism`, `ISM`, va `Ism` uchta turli o'zgaruvchi)
 
-## 🛠️ Matnni kesib olish (Using String Slicing)
+📌 Pythonda `ism`, `ISM` va `Ism` bu uchta alohida o‘zgaruvchi hisoblanadi.
 
-Matnni indekslar orqali **kesib olib**, bir nechta o‘zgaruvchilarga tayinlash mumkin:
-
-📌 **Misol**:
 ```python
-text = "Easy Python"
-a, b = text[0:5], text[5:]
-print(a)
-print(b)
+# kichik harflardan tashkil topgan o'zgaruvchi
+ism = "Ali"
+
+# hamma harflari katta bo'lgan o'zgaruvchi — bu boshqa o'zgaruvchi
+ISM = "Vali"
+
+# bosh harfi katta, qolgan kichik bo'lgan o'zgaruvchi — yana boshqa o'zgaruvchi
+Ism = "Sami"
+
+# 'ism' o'zgaruvchisining qiymatini chiqaramiz
+print(ism)  # Ali
+
+# 'ISM' o'zgaruvchisining qiymatini chiqaramiz
+print(ISM)  # Vali
+
+# 'Ism' o'zgaruvchisining qiymatini chiqaramiz
+print(Ism)  # Sami
 ```
 
-📋 **Natija**:
-```
-Easy 
-Python
-```
+## ✅ QO'SHIMCHA QOIDALAR
 
-> 🔔 **Izoh**: Python indekslashda **0-indeksdan boshlab** hisoblaydi. `text[0:5]` 0-indeksdan 4-indeksgacha bo‘lgan belgilarni oladi, 5-indeksni esa kiritmaydi.
+### ❇️ O'zgaruvchi nomini kichik harflar bilan yozing.
 
----
+📌 Python kodini o‘qishda va tushunishda qulaylik uchun o‘zgaruvchilarni kichik harflar bilan yozish odatiy hisoblanadi.
 
-## 🛠️ `*` operatori bilan qiymatlarni ajratish (Using * for Arbitrary Values)
-
-`*` operatori yordamida bir nechta qiymatni bitta o‘zgaruvchiga saqlash imkoniyati mavjud. Bu operator qolgan barcha qiymatlarni o‘zida jamlaydi:
-
-📌 **Misol**:
 ```python
-numbers = (10, 20, 30, 40, 50)
-x, *y, z = numbers
-print(x)
-print(y)
-print(z)
+# To'g'ri va tavsiya qilinadigan usul — o'zgaruvchi nomi kichik harflardan iborat
+ism = "Umid"
+
+# Tavsiya qilinmaydi — bosh harf bilan boshlash kodda chalkashlik keltirib chiqarishi mumkin
+Ism = "Umid"
+
+# Tavsiya qilinmaydi — hamma harflar katta bo‘lishi ko‘pincha konstantalar uchun ishlatiladi
+ISM = "Umid"
 ```
 
-📋 **Natija**:
-```
-10
-[20, 30, 40]
-50
-```
+### ❇️ O'zgaruvchi nomida 2 va undan ortiq so'z qatnashsa ularning orasini pastki chiziq (`_`) bilan ajrating (`ism_sharif="Umid G'aybullayev"`) 
 
-> 🔔 **Izoh**: `*y` barcha **oraliq qiymatlarni** oladi va ularni ro‘yxat (`list`) sifatida saqlaydi. Bu usul yordamida qiymatlarni tartib bilan ajratish qulay.
+📌 Bu usul o‘zgaruvchi nomini o‘qishni osonlashtiradi va kodni yanada tushunarli qiladi.
 
----
-
-## 🧪 Qo‘shimcha Misollar
-
-### 1. Dinamik qiymat tayinlash
-O‘zgaruvchilarga qiymatlarni dinamik ravishda tayinlash uchun quyidagicha kod yozish mumkin:
 ```python
-values = [1, 2, 3]
-a, b, c = values
-print(a, b, c)
+# Ikkita so‘zdan tashkil topgan o'zgaruvchi nomi, so‘zlar pastki chiziq bilan ajratilgan
+ism_sharif = "Umid G'aybullayev"
+
+# Ikkita so‘zdan tashkil topgan o'zgaruvchi nomi, so‘zlar pastki chiziq yordamida bog‘langan
+tugilgan_yil = 2004
 ```
 
-📋 **Natija**:
-```
-1 2 3
-```
+### ❇️ O'zgaruvchiga tushunarli nom bering (`y=20` emas `yosh=20`, `d="Korea"` emas `davlat = "Korea"` va hokazo)
 
-### 2. Qolgan qiymatlarni bitta o‘zgaruvchiga saqlash
-`*` operatori yordamida qolgan barcha qiymatlarni birlashtirish mumkin:
+📌 O‘zgaruvchi nomi uning ma’nosini ifodalashi kerak, shunda kodni o‘qish va tushunish osonlashadi.
+
 ```python
-names = ["Alice", "Bob", "Charlie", "David"]
-first, *middle, last = names
-print(first)   # Alice
-print(middle)  # ['Bob', 'Charlie']
-print(last)    # David
+# Yomon misollar — nomlar qisqa va ma’nosiz, kodni tushunishni qiyinlashtiradi
+y = 20
+d = "Korea"
+
+# Yaxshi misollar — nomlar ma’noli va tushunarli
+yosh = 20
+davlat = "Korea"
 ```
 
----
+### ❇️ Shuningdek o'zgaruvchilarga Pythonda ishlatiladigan funksiyalar va maxsus kalit so'zlarning(keywords) nomini bermang. Kalit so'zlar ro'yhatini ko'rish uchun python faylga  uyidagi kodni yozamiz:
 
-## 🏷️ Amaliyot uchun mashqlar
+📌 Chunki bu nomlar Python tili tomonidan maxsus ma’noga ega va ular bilan nomlash kodni buzadi yoki xato beradi.
 
-1. Quyidagi kodni to‘ldiring va xatolikni tuzating:
 ```python
-x, *y = 10, 20, 30, 40
-print(x)
-print(y)
+# Python kalit so'zlarini ko'rish uchun quyidagilarni yozamiz
+import keyword
+
+# Python kalit so'zlar ro'yxatini chiqaramiz
+print(keyword.kwlist)
 ```
 
-2. Quyidagi kod qanday natija beradi? O‘ylab ko‘ring va tekshiring:
+✅ To‘g‘ri:
+
 ```python
-fruits = ("apple", "banana", "cherry", "date")
-a, b, *c = fruits
-print(a, b, c)
+# To‘g‘ri misollar — kalit so'zlarni o'zgaruvchi nomining bir qismi sifatida ishlatish mumkin
+def_funksiya = 10
+for_son = 20
 ```
 
-3. O‘zgaruvchi qiymatlarini almashish uchun quyidagi kodni yozing:
+❌ Noto‘g‘ri:
+
 ```python
-x = 5
-y = 10
-
-# qiymatlarni almashish
-x, y = y, x
-
-print(x, y)
+# Noto‘g‘ri misollar — kalit so‘zlarni o‘zgaruvchi nomi sifatida ishlatish mumkin emas
+def = 10    # ❌ 'def' kalit so'z, o'zgaruvchi sifatida ishlatilmaydi
+for = 20    # ❌ 'for' kalit so'z, o'zgaruvchi sifatida ishlatilmaydi
 ```
-
----
-
-🎯 Ushbu usullar Python dasturlash tilida ko‘p hollarda qulay va samarali dastur yozish imkonini beradi.
-
-
-# 🧠 Output Variables (O‘zgaruvchilarni chiqarish)
-
-**Output variables** deganda, o‘zgaruvchilarga berilgan qiymatlarni terminalga chiqarish tushuniladi. Python tilida bu maqsadda eng ko‘p ishlatiladigan metod `print()` funksiyasi hisoblanadi. Quyida o‘zgaruvchilarni chiqarishning turli usullari va ularning afzalliklari keltirilgan.
-
----
-
-## 🛠️ `print()` funksiyasidan foydalanish
-
-O‘zgaruvchining qiymatini chiqarishning eng oddiy usuli — uni `print()` funksiyasiga uzatish.
-
-📌 **Misol**:
-```python
-x = "Easy Python"
-print(x)
-```
-
-📋 **Natija**:
-```
-Easy Python
-```
-
-> 🔔 **Izoh**: `print()` funksiyasi matnni va o‘zgaruvchilarning qiymatini ekranga chiqaradi.
-
----
-
-## 🛠️ Bir nechta o‘zgaruvchini `print()` yordamida chiqarish
-
-Bir nechta o‘zgaruvchini bitta `print()` funksiyasi yordamida chiqarish uchun, ularni vergul bilan ajratib yozish kerak. Python avtomatik ularning orasiga bo‘shliq qo‘yadi.
-
-📌 **Misol**:
-```python
-name = "Umid"
-age = 21
-city = "Navoiy"
-print(name, age, city)
-```
-
-📋 **Natija**:
-```
-Umid 21 Navoiy
-```
-
-> 🔔 **Izoh**: Vergul yordamida o‘zgaruvchilarni va matnlarni aralashtirib chiqarish qulay.
-
----
-
-## 🛠️ String qo‘shish (concatenation)
-
-O‘zgaruvchilarni matnlar bilan birlashtirib, bitta qatorda chiqarish mumkin.
-
-📌 **Misol**:
-```python
-name = "Umid"
-age = 21
-print("My name is " + name + " and I am " + str(age) + " years old.")
-```
-
-📋 **Natija**:
-```
-My name is Umid and I am 21 years old.
-```
-
-> 🔔 **Izoh**: 
-> - Raqamli qiymatlarni (`int`, `float`) matnga qo‘shishdan oldin ularni `str()` yordamida string turiga aylantirish kerak.
-> - String concatenation kodni o‘qishda biroz qiyinchilik tug‘dirishi mumkin.
-
----
-
-## 🛠️ f-Stringlardan foydalanish (Formatted String Literals)
-
-Python 3.6 va undan keyingi versiyalarda f-string yordamida o‘zgaruvchilarni matnlar orasiga kiritish mumkin. Bu usul o‘qilishi oson va ishlatishga qulay.
-
-📌 **Misol**:
-```python
-name = "Umid"
-age = 25
-print(f"My name is {name} and I am {age} years old.")
-```
-
-📋 **Natija**:
-```
-My name is Umid and I am 25 years old.
-```
-
-> 🟢 **Afzalliklari**:
-> - O‘qilishi oson va aniq.
-> - Qatorga o‘zgaruvchilarni kiritish juda qulay.
-> - `.format()` usuliga nisbatan tezroq ishlaydi.
-
----
-
-## 🛠️ `format()` metodidan foydalanish
-
-`format()` metodi yordamida ham o‘zgaruvchilarni matnlar orasiga joylashtirish mumkin.
-
-📌 **Misol**:
-```python
-name = "Umid"
-age = 25
-print("My name is {} and I am {} years old.".format(name, age))
-```
-
-📋 **Natija**:
-```
-My name is Umid and I am 25 years old.
-```
-
-> 🔔 **Izoh**: `format()` metodi f-stringga alternativ usul bo‘lib, Pythonning eski versiyalarida ham ishlatiladi.
-
----
-
-## 🛠️ `repr()` funksiyasi bilan developer-friendly chiqish
-
-`repr()` funksiyasi o‘zgaruvchilarni dasturchilar uchun qulayroq formatda qaytaradi. Bu funksiya debugging (xatoliklarni topish) jarayonida foydali bo‘ladi, chunki u qiymatlarni aniqroq ko‘rsatadi.
-
-📌 **Misol**:
-```python
-name = "Umid"
-print(repr(name))  # Outputs 'Umid'
-```
-
-📋 **Natija**:
-```
-'Umid'
-```
-
-> 🔔 **Izoh**: `repr()` qiymatlarni qo‘shtirnoqlar ichida chiqaradi va matnning ichki ko‘rinishini aks ettiradi.
-
----
-
-## 🛠️ O‘zgaruvchilarning qiymatini bir qatorda chiqarish
-
-Python 3.8 va undan keyingi versiyalarda `=` operatori yordamida o‘zgaruvchi nomini va uning qiymatini bir qatorda chiqarish mumkin.
-
-📌 **Misol**:
-```python
-x = 42
-y = "Python"
-print(f"x = {x}, y = {y}")
-```
-
-📋 **Natija**:
-```
-x = 42, y = Python
-```
-
----
-
-## 🧪 Qo‘shimcha Misollar
-
-1. Bir nechta o‘zgaruvchini birlashtirish:
-```python
-a = 10
-b = 20
-c = 30
-print(f"a = {a}, b = {b}, c = {c}")
-```
-
-2. Matnlarni qo‘shish va o‘zgaruvchilarni chiqarish:
-```python
-name = "Python"
-version = 3.10
-print("I am learning " + name + " version " + str(version))
-```
-
-3. `repr()` funksiyasining qo‘llanilishi:
-```python
-text = "Hello\nWorld"
-print(repr(text))  # Outputs 'Hello\nWorld'
-```
-
----
-
-## 🎯 Amaliyot uchun mashqlar
-
-1. Quyidagi kodni to‘ldiring va natijasini toping:
-```python
-name = "Umid"
-age = 21
-print(f"My name is {name} and my age is {age}.")
-```
-
-2. Quyidagi kod qanday natija beradi? O‘ylab ko‘ring va tekshiring:
-```python
-x = 3.14159
-print(f"The value of pi is approximately {x:.2f}.")
-```
-
-3. Matn va o‘zgaruvchilarni birlashtirib, yangi misol yozing:
-```python
-city = "Navoiy"
-population = 125000
-# Bu yerga kod yozing
-```
-
----
-
-🎯 Ushbu usullar Python dasturlash tilida o‘zgaruvchilarni terminalga chiqarishda ko‘p hollarda qulay va samarali dastur yozish imkonini beradi.
