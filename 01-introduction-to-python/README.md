@@ -2,5 +2,6 @@
 
 ## PYTHON HAQIDA
 
-Python – yuqori darajadagi, umumiy maqsadli dasturlash tili. U oddiy sintaksis, aniq o‘qiladigan kod, va keng imkoniyatlar bilan ajralib turadi. Python tili Guido van Rossum tomonidan 1989-yilda ishlab chiqilgan va 1991-yilda ommaga taqdim etilgan.
+Python dasturlash tili 1990-yillarning boshlarida Gvido van Rossum tomonidan yaratilgan. Oʻsha davrlarda foydalanish uchun qulay va keng imkoniyatlarga ega boʻlgan dastur yaratish kerak edi. Bu gʻoya sodda va tushunarli dasturlash tili – Pythonʼning ishlab chiqilishiga sabab boʻldi.
 
+Pythonʼning birinchi versiyasi 1991-yilda Python 0.9.0 nomi bilan ishlab chiqarilgan. Unga roʻyxat va satrlar bilan ishlash, shartli ibora va sikllar kabi asosiy funksiyalar qoʻshilgan.
