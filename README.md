@@ -1,6 +1,6 @@
 # Easy Python - Table of Contents
 
-│
+```markdown
 ├── 01-introduction-to-python/
 ├── 02-variables/
 ├── 03-data-types/
@@ -41,3 +41,4 @@
 ├── 38-real-world-project/
 ├── 39-version-control-git/
 └── 40-practice-tasks-and-mini-projects/
+```
