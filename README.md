@@ -4,41 +4,44 @@
 ├── 01-introduction-to-python/
 ├── 02-variables/
 ├── 03-data-types/
-├── 04-operators/
-├── 05-lists/
-├── 06-tuples/
-├── 07-sets/
-├── 08-dictionaries/
-├── 09-conditional-statements/
-├── 10-for-loops/
-├── 11-while-loops/
-├── 12-functions/
-├── 13-lambda-functions/
-├── 14-exception-handling/
-├── 15-file-handling/
-├── 16-modules/
-├── 17-third-party-packages/
-├── 18-object-oriented-programming/
-├── 19-dates-and-time/
-├── 20-file-and-directory-operations/
-├── 21-iterators-and-generators/
-├── 22-decorators/
-├── 23-list-comprehensions/
-├── 24-regular-expressions/
-├── 25-working-with-json/
-├── 26-working-with-apis/
-├── 27-mysql-postgresql-integration/
-├── 28-sqlite-integration/
-├── 29-virtual-environments/
-├── 30-packaging-applications/
-├── 31-writing-tests/
-├── 32-logging/
-├── 33-multithreading-multiprocessing/
-├── 34-async-programming/
-├── 35-gui-with-tkinter/
-├── 36-cli-with-argparse/
-├── 37-web-scraping/
-├── 38-real-world-project/
-├── 39-version-control-git/
-└── 40-practice-tasks-and-mini-projects/
+├── 04-type-conversion/
+├── 05-operators/
+├── 06-strings/
+├── 07-lists/
+├── 08-tuples/
+├── 09-sets/
+├── 10-dictionaries/
+├── 11-conditional-statements/
+├── 12-for-loops/
+├── 13-while-loops/
+├── 14-nested-loops/
+├── 15-break-and-continue/
+├── 16-functions/
+├── 17-function-arguments/
+├── 18-lambda-functions/
+├── 19-recursion/
+├── 20-exception-handling/
+├── 21-file-handling/
+├── 22-modules-and-packages/
+├── 23-built-in-functions/
+├── 24-variable-scope/
+├── 25-object-oriented-programming/
+│   ├── classes-and-objects/
+│   ├── constructors/
+│   ├── instance-and-class-variables/
+│   ├── inheritance/
+│   ├── method-overriding/
+│   ├── encapsulation/
+│   └── polymorphism/
+├── 26-iterators/
+├── 27-generators/
+├── 28-list-comprehensions/
+├── 29-dictionary-comprehensions/
+├── 30-set-comprehensions/
+├── 31-decorators/
+├── 32-higher-order-functions/
+├── 33-closures/
+├── 34-context-managers/
+├── 35-main-idiom/
+├── 36-python-coding-style/
 ```
