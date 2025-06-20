@@ -1,265 +1,191 @@
 # 🐍 PYTHON DASTURLASH ASOSLARI
 
-# 🧩 11-DARS FUNCTIONS
+# 🧩 WHAT IS PYTHON?
 
-> [!NOTE]
-> Python dasturlash tilida `funksiyalar` bu kod bo'laklarini qayta-qayta ishlatish uchun qulay vositadir. `Funksiyalar` yordamida kodni tartibli, tushunarli va takrorlanadigan qila olamiz.
+📌 Python — bu yuqori darajadagi, umumiy maqsadli, interpreted dasturlash tili. U soddaligi, oson sintaksisi, o‘qilishi qulayligi bilan mashhur.
 
-## FUNKSIYALARNI YARATISH VA CHAQIRISH
-Pythonda funksiyani `def` kalit so'zi yordamida yaratamiz. Funksiya quyidagi tuzilishga ega:
+📌 **High-Level Programming Language**: bu inson o‘qishi va tushunishi oson bo‘lgan dasturlash tili degani. Kompyuterlar past darajadagi tillarda ishlaydi (masalan: Assembly, Machine Code), ammo bu tillar inson uchun tushunish qiyin.
+
+✳️ Python esa odam tiliga yaqin bo‘lib yoziladi:
+
 ```python
-# Funksiya yaratish uchun 'def' kalit so‘zi yoziladi
-# function_name — bu funksiya nomi (odatda ingliz tilida bo‘ladi)
-# (parameters) — bu parametrlar, ya’ni funksiyaga uzatiladigan qiymatlar
-def function_name(parameters):
-
-    # Bu yerga funksiyaning tanasi yoziladi, ya’ni bajariladigan kodlar
-    # Istalgancha kod yozish mumkin
-
-    # return — bu funksiya natijasini qaytaradi (agar kerak bo‘lsa)
-    return value
+print("Salom, dunyo!")  # Ekranga matn chiqarish
 ```
-### Oddiy funksiya
-- Bu funksiya ikkita sonni qo'shib, natijani qaytaradi:
+📌 Bu buyruqni har kim tushunadi. Ammo past darajadagi tillarda xuddi shu ishni qilish juda murakkab bo‘ladi.
+
+📌 Yuqori darajadagi tillarning afzalliklari:
+
+- Sintaksisi oddiy va oson
+- O‘rganish va tushunish qulay
+- Ko‘p platformalarda ishlaydi
+- Kam kod bilan ko‘p ishni bajaradi
+
+📌 **General-Purpose Programming Language**: bu har xil dasturlarni yaratish uchun ishlatiladigan dasturlash tili.
+
+✳️ Python yordamida quyidagilarni qilish mumkin:
+
+- 🌐 Web dasturlar (Django, Flask)
+- 🤖 Sun'iy intellekt (AI, ML)
+- 📊 Ma’lumotlar tahlili (Pandas, NumPy)
+- 🖥️ Desktop ilovalar
+- 📱 Mobil ilovalar (Kivy, BeeWare)
+- 🎮 O‘yinlar (Pygame)
+- 🧪 Ilmiy hisob-kitoblar
+- 🛠️ Avtomatlashtirish va skriptlar
+
+| Tushuncha         | Ma'nosi                                                     |
+|-------------------|-------------------------------------------------------------|
+| Yuqori darajadagi | Inson o‘qishi oson, sodda sintaksisga ega dasturlash tili   |
+| Umumiy maqsadli   | Turli sohalarda foydalanish mumkin bo‘lgan dasturlash tili  |
+
+## ✅ PYTHON TARIXI
+
+✳️ Python asoschisi: Guido van Rossum
+
+- Guido van Rossum — Gollandiyalik dasturchi.
+- 1980-yillarda CWI (Centrum Wiskunde & Informatica) – Gollandiyadagi ilmiy markazda ishlagan.
+- U tilni soddaroq, tushunarli va o‘qilishi oson bo‘lishini istagan.
+- Tilga “Python” deb nom berilishiga sabab esa u juda yoqtirgan `“Monty Python’s Flying Circus”` nomli komedik TV dasturi edi.
+
+## ✅ PYTHON TARIXIY BOSQICHLARI
+
+### ❇️ PYTHON LOYIHASI BOSHLANISHI - 1989-YIL DEKABR
+
+📌 Guido dam olish vaqtida yangi til yozishga kirishadi.
+
+📌 Maqsadi: ABC dasturlash tilining (CWI tomonidan yaratilgan) soddaligi va foydaliligini yaxshilash.
+
+📌 Unga fayl va istalgan tizimga bog‘lanish (file handling & OS interfacing) imkoniyatlari qo‘shmoqchi bo‘ladi.
+
+### ❇️ PYTHON 1.0 - 1991-YIL 20-FEVRAL
+
+✳️ Python ilk rasmiy versiyasi:
+- Funksiya, shart operatorlari (`if`, `else`, `elif`)
+- `while`, `for`, `break`, `continue` operatorlari
+- Ma'lumot turlari: `str`, `list`, `dict`, `tuple`
+- `exception handling (try-except)` mavjud edi
+
+### ❇️ PYTHON 2.0 - 2000-YIL 16-DEKABR
+
+✳️ Muhim yangiliklar:
+
+- `list comprehensions` (ro‘yxatlar uchun qisqa yozuv)
+- `garbage collection` (avtomatik xotira tozalash)
+- Unicode qo‘llab-quvvatlash
+
+### ❇️ PYTHON 3.0 - 2008-YIL 3-DEKABR
+
+📌 Bu versiya to‘liq yangilangan, orqaga mos kelmaydigan versiya edi.
+
+✳️ Asosiy o‘zgarishlar:
+
+- `print` endi funksiya bo‘ldi: `print("Hello")`
+- `integer division` endi aniq natija beradi: 5/2 = 2.5
+- Unicode to‘liq qo‘llab-quvvatlandi
+- Yangi sintaksislar: `with`, `f-string`, `type hints` kiritildi
+
+## ✅ PYTHON VERSIYALARI JADVALI
+
+| Versiya     | Chiqqan sana    | Asosiy yangiliklar                      |
+|-------------|-----------------|-----------------------------------------|
+| Python 1.0  | 1991-yil        | Birinchi rasmiy nashr                   |
+| Python 2.0  | 2000-yil        | Unicode, GC, List comprehensions        |
+| Python 3.0  | 2008-yil        | Unicode, yangi sintaksis                |
+| Python 3.5  | 2015-yil        | `async/await`, `type hinting`           |
+| Python 3.6  | 2016-yil        | `f-strings`                             |
+| Python 3.9  | 2020-yil        | Yangi to‘plamlar funksiyalari           |
+| Python 3.10 | 2021-yil        | `match-case` pattern matching           |
+| Python 3.11 | 2022-yil        | Katta tezlik (50% gacha yaxshilangan)   |
+| Python 3.12 | 2023-yil        | Yaxshilangan profiling, diagnostics     |
+| Python 3.13 | 2024-yil (beta) | Tezlik va sintaktik yaxshilanishlar     |
+
+
+## ✅ PYTHONNING ASOSIY XUSUSIYATLARI
+
+**📌 Oson yoziladi va tushuniladi**
+- Python sintaksisi oddiy va inson tiliga o‘xshash. Shu sababli uni yangi o‘rganayotganlar tez tushunadi va kod yozishni oson o‘rganadi.
+
+**📌 Qatorma-qator bajariladi**
+- Python — interpreted til. Kodlar yuqoridan pastga qarab birma-bir bajariladi. Har bir qatordagi buyruq navbati bilan bajariladi.
+
+**📌 Turli operatsion tizimlarda ishlaydi**
+- Python dasturlari Windows, MacOS va Linux tizimlarida bir xil ishlaydi. Hech qanday alohida sozlashlarsiz ko‘p platformalarda foydalanish mumkin.
+
+**📌 Ko‘plab tayyor kutubxonalar mavjud**
+- Python juda katta kutubxonalar to‘plamiga ega. Ular yordamida murakkab matematik, grafik, internet, ma’lumotlar bilan bog‘liq ishlar tez va oson bajariladi.
+
+**📌 Obyektga yo‘naltirilgan dasturlash tili**
+- Python yirik va murakkab dasturlarni modullarga bo‘lib yozishga imkon beradi. Bu dasturlarni boshqarishni va ularni rivojlantirishni osonlashtiradi.
+
+**📌 Boshqa dasturlash tillari bilan birga ishlay oladi**
+- Python boshqa tillar — masalan, C, C++, Java yoki HTML bilan integratsiya qilib ishlatilishi mumkin. Bu uni yanada kuchli va moslashuvchan qiladi.
+
+## ✅ PYTHON QANDAY ISHLAYDI
+
+
+
+- **Code Writing**: Dastlab Python kodini `.py` fayl ko'rinishida yozasiz.
+- **Interpreter Runs**: Python interpretatori ushbu kodni o’qib, uni mashina tushunadigan `baytlarga` o‘zgartiradi. Bu jarayonda kod `qatorma-qator` tahlil qilinadi va ishlatiladi.
+- **Conversion to Bytecode**: Kod `bytecode`ga o‘zgartiriladi, bu esa Python `PVM`da ishlaydi. `bytecode` — bu kompyuterga tushunarli bo’lgan oraliq kod, lekin u hali ham yuqori darajali tildir.
+- **Python Virtual Machine (PVM)**: `bytecode` PVM orqali ishlaydi, va bu virtual mashina dastur kodini to‘liq bajaradi. Bu jarayon kompyuteringiz operatsion tizimi orqali amalga oshiriladi.
+- **Output Generated**: Kod bajarilishi bilan natijalar ekranga chiqariladi yoki kerakli hisob-kitoblar amalga oshiriladi.
+
+![img.png](images/img.png)
+
+### Pythonning qo‘llanish sohalari:
+
+- **Web Development:** [Django](https://www.djangoproject.com/), [Flask](https://flask.palletsprojects.com/en/3.0.x/) kabi freymvorklar orqali veb-saytlar va veb-ilovalar yaratish.
+- **Data Analysis and Scientific Computing:** [NumPy](https://numpy.org/), [pandas](https://pandas.pydata.org/), [SciPy](https://scipy.org/), [matplotlib](https://matplotlib.org/) kabi kutubxonalar yordamida.
+- **AI(Artificial Intelligence) and Machine Learning:** [TensorFlow](https://www.tensorflow.org/), [Keras](https://keras.io/), [PyTorch](https://pytorch.org/) kabi kutubxonalar yordamida.
+- **Automation and Scripting:** Turli xil vazifalarni avtomatlashtirish uchun.
+- **Game Development:** [Pygame](https://www.pygame.org/news) kabi kutubxonalar yordamida.
+
+
+### Python Muhiti va O‘rnatish:
+>[!NOTE]
+> Python dasturlash tilida dasturlashni boshlash uchun sizga Python interpretatorini kompyuteringizga o‘rnatish kerak bo‘ladi. Pythonning rasmiy veb-saytida Pythonning oxirgi versiyasini yuklab olish mumkin. Shuningdek, muhitni boshqarish va kod yozish uchun turli vositalar va muharrirlar mavjud.
+
+#### Python O‘rnatilishi:
+Windows
+1. Pythonni yuklab olish:
+    - [Pythonni rasmiy web-saytiga](https://www.python.org/) kiring.
+    - `Downloads` bo‘limiga o‘ting va `Windows` uchun oxirgi barqaror versiyasini yuklab oling.
+
+    ![alt text](images/image.png)
+
+2. Pythonni o‘rnatish:
+    - Yuklab olingan `.exe` faylini ishga tushiring.
+
+    ![alt text](images/image-1.png)
+
+    - `Add Python to PATH` katagiga belgi qo‘ying. Bu belgi Python'ni kompyuteringizdagi barcha joylarda ishlatishga imkon beradi.
+
+    ![alt text](images/2.png)
+
+    - `Install Now` tugmasini bosing va o‘rnatishni yakunlang.
+
+    ![alt text](images/1.png)
+
+    - Indikator to'lishini kutamiz.
+
+    ![alt text](images/image-3.png)
+
+    - `Setup was successfull` muvaffaqiyatli o'rnatildi.
+
+    ![alt text](images/image-4.png)
+
+3. O‘rnatishni tekshirish:
+    - `Command Prompt` yoki `PowerShell`ni oching.
+    - `python --version` yoki `python -V` buyrug‘ini kiriting. Bu sizga o‘rnatilgan Python versiyasini ko‘rsatadi.
+
+    ![alt text](images/image-2.png)
+
+### `Hello, World!` dasturini yozish.
 ```python
-# add_numbers — bu funksiyaning nomi
-# a va b — bu parametrlar, ya’ni kiruvchi sonlar
-def add_numbers(a, b):
-
-    # a va b ning yig'indisini result o‘zgaruvchisiga saqlaymiz
-    result = a + b
-
-    # result qiymatini funksiyadan tashqariga qaytaramiz
-    return result
-
-# Funksiyani chaqiramiz, unga 3 va 5 sonlarini uzatamiz
-# Natijani sum_result o‘zgaruvchisiga saqlaymiz
-sum_result = add_numbers(3, 5)
-
-# Natijani ekranga chiqaramiz (8 chiqadi)
-print(sum_result)  # Output: 8
-```
-### PARAMETR VA ARGUMENTLAR
-- Parametrlar
-    - `Parametrlar` – bu funksiyani yaratishda unga o'tkaziladigan o'zgaruvchilar. `Parametrlar` funksiya tanasida ishlatiladigan qiymatlarni belgilaydi. Ular funksiyani chaqirganda haqiqiy qiymatlar bilan almashtiriladi.
-```python
-# square_number — funksiyaning nomi (inglizcha)
-# number — bu parametr, funksiyaga uzatiladigan son
-def square_number(number):
-
-    # number ning kvadrati hisoblanadi va darhol qaytariladi
-    return number ** 2
-
-# square_number funksiyasini chaqiryapmiz va 5 ni uzatyapmiz
-# Natija 'result' o‘zgaruvchisiga saqlanadi
-result = square_number(5)
-
-# Natijani ekranga chiqaramiz (25 chiqadi)
-print(result)  # Natija: 25
-```
-- Argumentlar
-    - `Argumentlar` – bu funksiyani chaqirganda `parametrlar` uchun beriladigan haqiqiy qiymatlar. Ular funksiyaga ma'lum bir qiymatlarni berish uchun ishlatiladi.
-```python
-def yigindini_xisobla(a, b):
-    return a + b
-
-# 'a' va 'b' parametrlar uchun beriladigan qiymatlar bu yerda argumentlar bo'ladi.
-natija = yigindini_xisobla(3, 7)
-print(natija)  # Natija: 10
-```
-### POSITION VA KALIT SO'ZLI ARGUMENTLAR
-- Position argumentlar
-    - Pozitsion argumentlar funksiyaga o'z joyi (`pozitsiyasi`) bo'yicha beriladi. Argumentlar `parametrlar` qatoriga mos ravishda ketma-ketlikda beriladi.
-```python
-def yigindini_xisobla(a, b):
-    return a + b
-
-# 'a' = 2 va 'b' = 3 bo'ladi.
-natija = yigindini_xisobla(2, 3)
-print(natija)  # Natija: 5
-```
-- Kalit so'zli argumentlar
-    - Kalit so'zli argumentlar `parametr` nomi bilan bog'langan qiymat sifatida beriladi. Bu usul `pozitsion` ketma-ketlikka bog'liq emas va kodni tushunishni osonlashtiradi.
-```python
-def yigindini_xisobla(a, b):
-    return a + b
-
-# Bu yerda 'b' birinchi, 'a' esa ikkinchi bo'lib berilmoqda.
-natija = yigindini_xisobla(b=3, a=2)
-print(natija)  # Natija: 5
+print("Hello World!")
 ```
 
-### QAYTISH QIYMATI(return)
-> [!NOTE] 
-> Funksiya natijani qaytarish uchun `return` operatoridan foydalanadi. `return` funksiyani to'xtatadi va qaytadigan qiymatni chaqirgan joyga yuboradi.
-- Qaytarish qiymatli funksiya
-```python
-def kvadratni_xisobla(son):
-    return son ** 2
-
-natija = kvadratni_xisobla(4)
-print(natija)  # Natija: 16
-```
-Yuqoridagi funksiya sonning kvadratini hisoblaydi
-
-### DEFAULT QIYMATLAR
-- Ba'zida `parametrlar` uchun oldindan belgilangan `standart` qiymatlar berish mumkin. Agar funksiyani chaqirganingizda bu `parametr` uchun qiymat bermasangiz, `standart` qiymatdan foydalaniladi.
-```python
-def salomlash(ism="Do'stim"):
-    print(f"Salom, {ism}!")
-
-salomlash()  # Natija: Salom, Do'stim!
-salomlash("Ali")  # Natija: Salom, Ali!
-```
-
-### *args va **kwargs
-- Agar funksiya turli xil sonli argumentlarni qabul qilishi kerak bo'lsa, `*args `va `**kwargs` dan foydalanamiz.
-
-- *args argumentlar
-    - `*args` funksiya ichida tuple(to'plam) shaklida beriladi va turli pozitsion argumentlarni qabul qiladi.
-```python
-def summa(*args):
-    return sum(args)
-# *args bilan foydalanish
-print(summa(1, 2, 3, 4))  # Natija: 10
-```
-- **kwargs argumentlar
-    - **kwargs funksiya ichida dictionary (lug'at) shaklida beriladi va kalit so'zli argumentlarni qabul qiladi.
-```python
-def malumot_korsat(**kwargs):
-    for kalit, qiymat in kwargs.items():
-        print(f"{kalit}: {qiymat}")
-
-# **kwargs bilan foydalanish
-malumot_korsat(ism="Ali", yosh=25, shahar="Toshkent")
-# Natija:
-# ism: Ali
-# yosh: 25
-# shahar: Toshkent
-```
-### Lambda FUNCTION
-> [!NOTE] 
-> Lambda funksiyalari qisqa funksiyalar bo'lib, ularni bir qator kod bilan yozish mumkin.
-- Lambda funksiyasini yaratish uchun lambda kalit so'zidan foydalanamiz, va u quyidagi tuzilishga ega:
-```python
-lambda argumentlar: ifoda
-```
-- Bu yerda
-    - **lambda** - `lambda` funksiyasini yaratish uchun kalit so'z.
-    - **argumentlar** - funksiyaga kiruvchi qiymatlar (`parametrlar`).
-    - **ifoda** - funksiyaning qaytaradigan natijasi (ko'pincha bitta ifoda bo'ladi).
-- Keling, ikkita sonni qo'shadigan oddiy `lambda` funksiyasini yarataylik:
-```python
-yigindi = lambda x, y: x + y
-natija = yigindi(5, 3)
-print(natija)  # Natija: 8
-```
-Bu yerda `lambda x, y: x + y` funksiyasi ikki argumentni qabul qiladi (`x` va `y`) va ularni qo'shib, natijani qaytaradi. Funksiya `yigindi` nomi bilan saqlanadi va keyin chaqiriladi.
-
-`Lambda` funksiyalari va `def` bilan yaratilgan funksiyalar o'rtasidagi farq
-- `Lambda` funksiyalari va `def` yordamida yaratilgan funksiyalar o'rtasidagi asosiy farq shundaki, `lambda` funksiyalari juda qisqa va faqat bitta ifodani bajaradi, `def` esa ko'proq qatorli kodlarni o'z ichiga olishi mumkin.
-
-`def` bilan funksiya yaratish
-```python
-def yigindini_xosobla(x, y):
-    return x + y
-
-natija = yigindini_xosobla(5, 3)
-print(natija)  # Natija: 8
-```
-> [!NOTE]
-> `Lambda` funksiyalari ko'pincha oddiy hisob-kitoblar yoki anonim funksiyalar kerak bo'lgan joylarda ishlatiladi, masalan, `map`, `filter`, va `sorted` kabi funksiyalarda.
-
-### `lambda` FUNKSIYASIDAN FOYDALANISH
-1. `map()` funksiyasi bilan lambda
-- `map()` funksiyasi berilgan funksiyani har bir elementga qo'llaydi va yangi ro'yxat qaytaradi.
-```python
-sonlar = [1, 2, 3, 4]
-kvadratlar = list(map(lambda x: x ** 2, sonlar))
-print(kvadratlar)  # Natija: [1, 4, 9, 16]
-```
-Yuqorida `lambda x: x ** 2` har bir elementni kvadratga ko'paytiradi.
-2. `filter()` funksiyasi bilan **lambda**
-- `filter()` funksiyasi berilgan shart bo'yicha elementlarni saralaydi.
-```python
-sonlar = [1, 2, 3, 4, 5, 6, 7, 8]
-juft_sonlar = list(filter(lambda x: x % 2 == 0, sonlar))
-print(juft_sonlar)  # Natija: [2, 4, 6, 8]
-```
-Yuqorida `lambda x: x % 2 == 0` juft sonlarni tanlaydi.
-3. `sorted()` funksiyasi bilan **lambda**
-- `sorted()` funksiyasi ro'yxatni tartiblaydi va `lambda` yordamida tartiblash qoidalarini belgilash mumkin.
-```python
-mevalar = ["olma", "banan", "apelsin", "anor"]
-tartiblangan = sorted(mevalar, key=lambda x: len(x))
-print(tartiblangan)  # Natija: ['olma', 'anor', 'banan', 'apelsin']
-```
-Bu yerda `lambda x: len(x)` uzunligi bo'yicha mevalarni tartiblaydi.
-### ICHMA-ICH lambda FUNKSIYALAR
-- `Lambda` funksiyalarni boshqa funksiyalarga ichida ishlatish mumkin, bu esa kodni qisqartirish va tezkor ishlatish imkonini beradi.
-```python
-def tashqi_funksiya(karrali):
-    return lambda x: x * karrali
-
-ikki = tashqi_funksiya(2)
-uch = tashqi_funksiya(3)
-
-print(ikki(5))  # Natija: 10
-print(uch(5))  # Natija: 15
-```
-Yuqorida `tashqi_funksiya` funksiya ichida `lambda` funksiyani qaytaradi va bu `lambda` funksiyasi karrali sonni hisoblaydi.
-
-### FUNKSIYA ICHIDA FUNKSIYA YARATISH
-- Pythonda funksiya ichida boshqa bir funksiyani yaratish imkoniyati mavjud. Bu imkoniyatni `ichki funksiyalar` deb ataladi. Ichki funksiyalar biror bir funksiyaning ichida aniqlanadi va odatda shu tashqi funksiyaga xos bo'lgan operatsiyalarni bajarish uchun ishlatiladi.
-```python
-def tashqi_funksiya(x):
-    def ichki_funksiya(y):
-        return y ** 2
-    return ichki_funksiya(x) + 5
-
-natija = tashqi_funksiya(3)
-print(natija)  # Natija: 14
-```
-Yuqorida `ichki_funksiya(y)` funksiya tashqi funksiyaning ichida aniqlangan va u sonning kvadratini hisoblaydi. `tashqi_funksiya(x)` funksiyasi esa `ichki_funksiya(x)` chaqirib, natijaga 5 qo'shadi va umumiy natijani qaytaradi.
-
-- Ichki funksiyalarning qo'llanilishi:
-    - **Kapsulatsiya:** Tashqi funksiyaga xos bo'lgan kodni izolyatsiya qilish uchun. Ichki funksiya faqat tashqi funksiyaning ichida mavjud bo'lib, uni tashqi funksiyadan tashqarida chaqirib bo'lmaydi.
-    - **Kod takrorlanishini kamaytirish:** Ko'p martalik ishlatiladigan kod qismlarini ichki funksiya ichida yozish.
-    - **Murakkab funksional tuzilmalarni yaratish:** Funksiya ichidagi funksiya orqali murakkab hisob-kitoblarni bajarish.
 ## AMALIYOT
-- Oddiy matematik funksiya:
-    - Funksiya yarating, u ikkita sonni qabul qilib, ularni ko'paytirib qaytarsin. Agar foydalanuvchi son bermasa, ikkala son uchun standart qiymat 1 bo'lsin. <br>
-    **Natija:**
-    ```python
-    print(kopaytirish(5, 3))  # Natija: 15
-    print(kopaytirish())      # Natija: 1
-    ```
-- Salomlash funksiyasi:
-    - Funksiya yarating, u ismni qabul qilsin va foydalanuvchiga `Salom, [ism]!` deb salomlashsin. Agar ism berilmasa, `Salom, Do'stim!` deb salomlashsin. <br>
-    **Natija:**
-    ```python
-    print(salomlash("Ali"))  # Natija: Salom, Ali!
-    print(salomlash())       # Natija: Salom, Do'stim!
-    ```
-- Sonlarning kvadratlari:
-    - Funksiya yarating, u bir ro'yxat qabul qilib, har bir elementning kvadratini qaytarsin. Ro'yxatni `map()` va lambda funksiyasi yordamida qayta ishlang. <br>
-    **Natija:**
-    ```python
-    print(kvadratlar([1, 2, 3, 4]))  # Natija: [1, 4, 9, 16]
-    ```
-- Juft sonlarni filtrlang:
-    - Funksiya yarating, u ro'yxatdan faqat juft sonlarni ajratib qaytarsin. `filter()` va lambda funksiyasidan foydalaning. <br>
-    **Natija:**
-    ```python
-    print(juft_sonlar([1, 2, 3, 4, 5, 6]))  # Natija: [2, 4, 6]
-    ```
-- Student ma'lumotlarini qaytaruvchi funksiya:
-    - Funksiya yarating, u talabaning `ismi`, `yoshi`, va `kursini` qabul qilib, bu ma'lumotlarni tartiblangan ko'rinishda qaytarsin. `**kwargs` dan foydalaning. <br>
-    **Natija:**
-    ```python
-    talaba_ma'lumotlari(ism="Ali", yosh=21, kurs="Python")
-    # Natija:
-    # ism: Ali
-    # yosh: 21
-    # kurs: Python
-    ```
+- `Python` interpreterini o'rnatish.
+- `Hello, World!` dasturini yozish va ishga tushirish.
+- `print()` funksiyasi yordamida turli xabarlarni chiqarish.
