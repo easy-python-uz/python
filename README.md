@@ -1,7 +1,7 @@
 # Easy Python - Table of Contents
 
-```markdown
 [01-introduction-to-python](https://github.com/easy-python-uz/python/blob/main/01-introduction-to-python/README.md)
+
 ├── 02-variables/
 ├── 03-data-types/
 ├── 04-type-conversion/
@@ -44,4 +44,3 @@
 ├── 34-context-managers/
 ├── 35-main-idiom/
 ├── 36-python-coding-style/
-```
